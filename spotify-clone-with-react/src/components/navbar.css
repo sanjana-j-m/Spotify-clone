@@ -1,0 +1,49 @@
+/* General Navbar Styling */
+nav {
+    font-family: 'Inria Sans', sans-serif; /* Using the provided font */
+    position: fixed; /* Makes the navbar stick to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  }
+  
+  nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black; /* Provided background color */
+    color: white; /* White text color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    padding: 0 12px;
+  }
+  
+  nav ul li.brand {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li.brand img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #1db954; /* Spotify green on hover */
+  }
+  
