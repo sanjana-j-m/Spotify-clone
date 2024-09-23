@@ -1,18 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './navbar.css';
+import { useAuth0 } from '@auth0/auth0-react';
+import './navbar.css'; // Import Navbar CSS
 
 const Navbar = () => {
+  const { logout } = useAuth0();
+
   return (
     <nav>
       <ul>
-        <li className="brand">
-          <img src="logo.png" alt="Spotify" /> Spotify
+        <li>My Application</li>
+        <li style={{ marginLeft: 'auto' }}> {/* This pushes the logout button to the right */}
+          <button className="logout-btn" onClick={() => logout({ returnTo: window.location.origin })}>
+            Logout
+          </button>
         </li>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li><Link to="/register">Register</Link></li>
-        <li><Link to="/player">Player</Link></li>
       </ul>
     </nav>
   );

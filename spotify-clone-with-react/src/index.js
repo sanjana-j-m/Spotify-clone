@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { Auth0Provider } from '@auth0/auth0-react';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
+    <Auth0Provider domain="dev-5cqrthigaorsv3ys.us.auth0.com"
+    clientId="XzcbnVMKE9W17QyuoiV4ebNcV0UT8cJI"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
     <App />
+    </Auth0Provider >
+    
   </React.StrictMode>
 );
 
