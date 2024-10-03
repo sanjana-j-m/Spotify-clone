@@ -1,19 +1,17 @@
+// Navbar.js
 import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
-import './navbar.css'; // Import Navbar CSS
+import './navbar.css';
 
-const Navbar = () => {
-  const { logout } = useAuth0();
-
+const Navbar = ({ toggleAlbums }) => {
   return (
-    <nav>
+    <nav className="navbar">
+      <h1>My App</h1>
       <ul>
-        <li>My Application</li>
-        <li style={{ marginLeft: 'auto' }}> {/* This pushes the logout button to the right */}
-          <button className="logout-btn" onClick={() => logout({ returnTo: window.location.origin })}>
-            Logout
-          </button>
-        </li>
+        <li><a href="/">Home</a></li>
+        <li><button onClick={toggleAlbums}>My Albums</button></li> {/* Toggle Albums button */}
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/logout">Logout</a></li>
       </ul>
     </nav>
   );

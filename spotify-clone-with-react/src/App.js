@@ -19,8 +19,11 @@ const App = () => {
           <LoginPage /> // If not authenticated, show login page
         ) : (
           <>
+           <div className="fullscreen">
+           <Home /> {/* Show the home content */}
+    </div> 
+          
             
-            <Home /> {/* Show the home content */}
           </>
         )}
       </div>

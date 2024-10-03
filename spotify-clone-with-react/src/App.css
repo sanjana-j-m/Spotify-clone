@@ -1,10 +1,18 @@
 /* App.css */
-
+.fullscreen {
+  width: 100vw; /* 100% of the viewport width */
+  height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
   background: #f5f7fa;
+  height: 100%;
+  overflow: hidden;
 }
 
 .container {
